@@ -14,13 +14,12 @@
 			<li><a href="index.html">Home</a></li>
 			<li><a href="instance.html">CreateVM</a></li>
 			<li><a href="gallery.html">Gallery</a></li>
-			<li><a href="#about">About</a></li>
+			<li><a href="mysqlcon.php">DB</a></li>
 			</ul>
 			
 			<div id="center">
-                <h1> system (sh) test </h1>
-
-                <h3> result </h3>
+                <h1> install instance </h1>
+				<h1>		result 	</h1>
 			</div>
                 <hr>
 				
@@ -36,6 +35,19 @@
                 echo "vmcpus : "."$vcpus"."<br>";
                 echo "vram : "."$ram"."<br>";
                 echo "network : "."$network"."<br>";
+				?>
+				</h2>
+				
+				<h1> IN DB server </h1>
+				
+				<h2>
+				<?php
+				$conn = mysqli_connect('localhost','user1','user1','test');
+				$sql = "SELECT * FROM vmtbl WHERE vmname = '$vmname'";
+				$result = mysqli_query($conn, $sql);
+				$row = mysqli_fetch_array($result);
+				echo '<h1>'.$row['hostname']." ".$row['vmname']." ".$row['vcpus']." ".$row['vram'].'</h1>';
+				
                 $a1="finished!!";
                 ?>
                 </h2>
