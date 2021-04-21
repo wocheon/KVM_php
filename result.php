@@ -35,7 +35,7 @@
                 $ram=$_POST["ram"];
                 $network=$_POST["network"];
 
-                //exec("/bin/bash /var/www/html/ins1.sh $vmname $vcpus $ram");
+                exec("/bin/bash /var/www/html/ins1.sh $vmname $vcpus $ram");
                 echo "vmname : "."$vmname"."<br>";
                 echo "vmcpus : "."$vcpus"."<br>";
                 echo "vram : "."$ram"."<br>";
@@ -48,12 +48,13 @@
 				</div>
 				
 				<h2>
-				<?php
-				$conn = mysqli_connect('localhost','user1','user1','test');
-				$sql = "SELECT * FROM vmtbl WHERE vmname = '$vmname'";
-				$result = mysqli_query($conn, $sql);
-				$row = mysqli_fetch_array($result);
-				echo $row['hostname']." ".$row['vmname']." ".$row['vcpus']." ".$row['vram'];
+		<?PHP
+
+                $vmname1=$_POST["vmname"];
+                $vcpus1=$_POST["vcpus"];
+                $ram1=$_POST["ram"];
+                $network1=$_POST["network"];
+                exec("/bin/bash /var/www/html/ins2.sh $vmname1 $vcpus1 $ram1");
 				$a1=" Install Finished !!";
                 ?>
                 </h2>
