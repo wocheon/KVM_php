@@ -24,31 +24,31 @@
 			</ul>
 
 		
-                <h1>가상머신 생성하기</h1><hr><br>
+                <h1>Create KVM Instance</h1><hr><br>
 				
 				<div style="text-align: center;">		             
 				<b>step1.SELECT OPTION</b> > step2 > step3<br><br>
 		<div id="center">		             
 				<form action="createvm.php" method="post">
-                가상머신 이름 : &nbsp;&nbsp;<input type="text" name="vmname"/><br><br>
-                가상머신 CPU 개수 :&nbsp;&nbsp;
+                VMname : &nbsp;&nbsp;<input type="text" name="vmname"/><br><br>
+                VCPUS :&nbsp;&nbsp;
                 <select name="vcpus">
                         <option value="1">1 core</option>
                         <option value="2">2 core</option>
                 </select><br><br>
-                가상머신 메모리 크기 :&nbsp;&nbsp;
+                VRAM :&nbsp;&nbsp;
                 <select name="ram">
                         <option value="1024">1 GB</option>
                         <option value="2048">2 GB</option>
                 </select><br><br>
-                연결할 네트워크 :&nbsp;&nbsp;
+                Network Setting :&nbsp;&nbsp;
                 <select name="network">
-                        <option value="bridge">인터넷 직접 연결함</option>
-                        <option value="nat">NAT를 통해 주소변환 연결</option>
-                        <option value="host-only">인터넷 연결 없음</option>
+                        <option value="bridge">Directly connect</option>
+                        <option value="nat">USE NAT</option>
+                        <option value="host-only">NULL</option>
                 </select><br><br><br>
 
-                <input type="submit" value="Next" onclick="alert('가상머신 생성을 시작합니다')">&nbsp;&nbsp;
+                <input type="submit" value="Next" onclick="alert('start create KVM instance!')">&nbsp;&nbsp;
                 <input type="reset" value="reset">
 
                 </form>
