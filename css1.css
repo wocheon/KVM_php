@@ -1,0 +1,40 @@
+	@charset "utf-8";
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 5000px;
+  background-color: #339966;
+  }
+li { display: inline-block;}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #006699;
+  color: white;
+}
+
+
+#two {
+		background-color: olive;
+		position : fixed;
+		float: right;
+			top: 0px;
+		right: 0px;
+		
+		}
+h1 { color: black; font-size: 40px; text-align: center; }
+
+h2 { color: olive; font-size: 30px; text-align: center; }
+
+h3 { color: #6666CC; font-size: 35px; text-align: center; }
+
+	#center { text-align: center; font-family : impact; }	
+	#main {font-size:4em; font-family:impact; color:#003300; text-align: center; }
