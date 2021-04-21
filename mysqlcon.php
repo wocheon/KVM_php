@@ -16,32 +16,30 @@
 			<li><a href="gallery.html">Gallery</a></li>
 			<li><a href="mysqlcon.php">DB</a></li>
 			</ul>
-		
-	<?php
-	$db_host="localhost";
-	$db_user="root";
-	$db_password="1234";
-	$db_name="";
-	$con=mysql_connect($db_host,$db_user,$db_password,$db_name);
-	
-	if( mysql_connect_error($con) ) {
-		echo "MySQL con FAIL !!", "<br>";
-		echo "ERROR : ", mysql_connect_error();
-		exit();
-		}
-	
-	echo "MYSQL con success!!";
-	mysql_close($con);
+<h1>		
+<?php
+$con = mysqli_connect("localhost", "user1", "user1","test") or die ("Mysql connection fail !!!");
+echo ("MYSQL CON success!!")."<br>";
+
+$sql = "SELECT * FROM vmtbl";
+$ret = mysqli_query($con, $sql);
+
+if ($ret) {
+	echo mysqli_num_rows($ret), "rows serch"."<br>"."<br>";
+}
+
+else {
+	echo "데이터 조회실패!!"."<br>";
+	exit();
+}
+	echo "Hostname  vmname  vcpus  vram "."<br>";
+while($row = mysqli_fetch_array($ret)) {
+	echo $row['hostname'], "  " , $row['vmname'], "  ", $row['vcpus'], "  ",$row['vram'], " ", "<br>";
+}
+
+
+mysqli_close($con);
 ?>
-	
-		
+</h1>
 	</body>
 </html>
-
-
-
-
-
-		
-		
-    
