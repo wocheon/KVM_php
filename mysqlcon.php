@@ -18,10 +18,10 @@
 			</ul>
 <p>		
 <?php
-$con = mysqli_connect("localhost", "user1", "user1","test") or die ("Mysql connection fail !!!");
+$con = mysqli_connect("localhost", "user1", "user1","testdb") or die ("Mysql connection fail !!!");
 echo ("MYSQL CON success!!");
 
-$sql = "SELECT * FROM vmtbl";
+$sql = "SELECT * FROM vm_view";
 $ret = mysqli_query($con, $sql);
 
 if ($ret) {
@@ -41,7 +41,7 @@ else {
 <?php
 	echo "Hostname  vmname  vcpus  vram "."<br>";
 while($row = mysqli_fetch_array($ret)) {
-	echo $row['hostname'], "  " , $row['vmname'], "  ", $row['vcpus'], "  ",$row['vram'], " ", "<br>";
+	echo $row['hostname']."  ".$row['ipaddr']." ".$row['cpurate']." ".$row['vmname'], "  ", $row['vcpus'], "  ",$row['vram'], " ", "<br>";
 }
 
 mysqli_close($con);
