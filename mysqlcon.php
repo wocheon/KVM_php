@@ -7,7 +7,7 @@
 
 	<body>
 	    <div id="main">
-		MANAGEMENT PAGE
+		MANAGEMENT PAGE<br>
 		</div>
 		
 		<ul>
@@ -16,30 +16,45 @@
 			<li><a href="gallery.html">Gallery</a></li>
 			<li><a href="mysqlcon.php">DB</a></li>
 			</ul>
-<h1>		
+<p>		
 <?php
 $con = mysqli_connect("localhost", "user1", "user1","test") or die ("Mysql connection fail !!!");
-echo ("MYSQL CON success!!")."<br>";
+echo ("MYSQL CON success!!");
 
 $sql = "SELECT * FROM vmtbl";
 $ret = mysqli_query($con, $sql);
 
 if ($ret) {
-	echo mysqli_num_rows($ret), "rows serch"."<br>"."<br>";
+	echo "(".mysqli_num_rows($ret), "rows serch)"."<br>"."<br>";
 }
 
 else {
 	echo "데이터 조회실패!!"."<br>";
 	exit();
 }
+?>
+</p>
+
+<h1> vm list </h1>
+
+<h2>
+<?php
 	echo "Hostname  vmname  vcpus  vram "."<br>";
 while($row = mysqli_fetch_array($ret)) {
 	echo $row['hostname'], "  " , $row['vmname'], "  ", $row['vcpus'], "  ",$row['vram'], " ", "<br>";
 }
 
-
 mysqli_close($con);
 ?>
-</h1>
+</h2>
+
+<br><br><br><br><br><br><br><hr>
+	<div style= "font-size:2em; margin:auto; color:#333333; font-family:impact" align="center" >
+	<p><b>contact</b></p>
+	</div>
+	<div style= "font-size:1.5em; margin:auto; font-family:impact" align="center" >
+	<img src="phone.png" width="30" height="30"> Phone  010-xxxx-xxxx<br>
+	<p>	<img src="email.png" width="30" height="30"> Email	ciw0707@naver.com</P>
+	</div>
 	</body>
 </html>
