@@ -7,7 +7,7 @@
 
     <body>
 	<div id="main">
-	MANAGEMENT PAGE
+	MANAGEMENT PAGE<br>
 	</div>
 			
 		<ul>
@@ -24,8 +24,7 @@
 				</div>
 				
 			<div id="center">
-                
-				<h1>		result 	</h1>
+            <h1>result</h1>
 			</div>
                 <hr>
 				
@@ -44,7 +43,9 @@
 				?>
 				</h2>
 				
-				<h1> IN DB server </h1>
+				<div id="center">
+				<h1> on DB table </h1>
+				</div>
 				
 				<h2>
 				<?php
@@ -52,15 +53,25 @@
 				$sql = "SELECT * FROM vmtbl WHERE vmname = '$vmname'";
 				$result = mysqli_query($conn, $sql);
 				$row = mysqli_fetch_array($result);
-				echo '<h1>'.$row['hostname']." ".$row['vmname']." ".$row['vcpus']." ".$row['vram'].'</h1>';
-				
-                $a1="finished!!";
+				echo $row['hostname']." ".$row['vmname']." ".$row['vcpus']." ".$row['vram'];
+				$a1=" Install Finished !!";
                 ?>
                 </h2>
                 <hr>
-				
                 <h3><?=$a1?></h3>
-			
-
+				
+				<div id="center">
+				<form action="mysqlcon.php" method="post">
+				<input type="submit" value="go to VM list" style="font-size : 20px; witdh: 50px;">
+				</div>
+				
+	<br><br><br><br><br><br><br><hr>
+	<div style= "font-size:2em; margin:auto; color:#333333; font-family:impact" align="center" >
+	<p><b>contact</b></p>
+	</div>
+	<div style= "font-size:1.5em; margin:auto; font-family:impact" align="center" >
+	<img src="phone.png" width="30" height="30"> Phone  010-xxxx-xxxx<br>
+	<p>	<img src="email.png" width="30" height="30"> Email	ciw0707@naver.com</P>
+	</div>
 </body>
 </html>
