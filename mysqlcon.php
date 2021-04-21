@@ -10,6 +10,13 @@
 		MANAGEMENT PAGE
 		</div>
 		
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="instance.html">CreateVM</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="mysqlcon.php">DB</a></li>
+			</ul>
+		
 	<?php
 	$db_host="localhost";
 	$db_user="root";
