@@ -17,8 +17,14 @@
 			<li><a href="mysqlcon.php">DB</a></li>
 			</ul>
 			
+			  <h1>Create KVM Instance</h1><hr><br>
+				
+				<div style="text-align: center;">		             
+				step1 > step2 > <b>step3.Finished</b><br><br>
+				</div>
+				
 			<div id="center">
-                <h1> install instance </h1>
+                
 				<h1>		result 	</h1>
 			</div>
                 <hr>
