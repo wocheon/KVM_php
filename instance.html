@@ -13,7 +13,7 @@
 		
         <body>
 			<div id="main">
-			MANAGEMENT PAGE
+			MANAGEMENT PAGE<br>
 			</div>
 			
 				<ul>
@@ -28,30 +28,42 @@
 				
 				<div style="text-align: center;">		             
 				<b>step1.SELECT OPTION</b> > step2 > step3<br><br>
-		<div id="center">		             
+				
+				<div id="center1">		             
 				<form action="createvm.php" method="post">
-                VMname : &nbsp;&nbsp;<input type="text" name="vmname"/><br><br>
+                VMname : &nbsp;&nbsp;<input type="text" name="vmname" style="font-size : 25px; width: 150px;"/><br><br>
                 VCPUS :&nbsp;&nbsp;
-                <select name="vcpus">
+                <select name="vcpus" style="font-size : 25px;">
                         <option value="1">1 core</option>
                         <option value="2">2 core</option>
                 </select><br><br>
                 VRAM :&nbsp;&nbsp;
-                <select name="ram">
+                <select name="ram" style="font-size : 25px;">
                         <option value="1024">1 GB</option>
                         <option value="2048">2 GB</option>
                 </select><br><br>
                 Network Setting :&nbsp;&nbsp;
-                <select name="network">
+                <select name="network" style="font-size : 25px;">
                         <option value="bridge">Directly connect</option>
                         <option value="nat">USE NAT</option>
                         <option value="host-only">NULL</option>
                 </select><br><br><br>
-
-                <input type="submit" value="Next" onclick="alert('start create KVM instance!')">&nbsp;&nbsp;
-                <input type="reset" value="reset">
+				
+				
+				 <input type="reset" value="reset" style="font-size : 20px;">&nbsp;&nbsp;
+                <input type="submit" value="Next" style="font-size : 20px;" onclick="alert('start create KVM instance!')">
+               
 
                 </form>
 		</div>
+		
+		<br><br><br><br><br><br><br><hr>
+	<div style= "font-size:2em; margin:auto; color:#333333; font-family:impact" align="center" >
+	<p><b>contact</b></p>
+	</div>
+	<div style= "font-size:1.5em; margin:auto; font-family:impact" align="center" >
+	<img src="phone.png" width="30" height="30"> Phone  010-xxxx-xxxx<br>
+	<p>	<img src="email.png" width="30" height="30"> Email	ciw0707@naver.com</P>
+	</div>
         </body>
 </html>
