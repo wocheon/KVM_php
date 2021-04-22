@@ -1,4 +1,4 @@
-#libvert를 이용하여 이미지 설치 및 인스턴스 
+#libvert를 이용하여 이미지 설치 및 인스턴스  
 
 virt-builder cirros-0.3.5 --size 5G -o /root/${1}.img
 
