@@ -2,30 +2,30 @@
 <html>
         <head>
                 <title>가상머신 생성 페이지</title>
-				<link rel="stylesheet" href="css1.css" type="text/css">
+                                <link rel="stylesheet" href="css1.css" type="text/css">
         </head>
 
-		
+
         <body>
-			<div id="main">
-			MANAGEMENT PAGE<br>
-			</div>
-			
-			<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="instance.html">CreateVM</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a href="mysqlcon.php">DB</a></li>
-			</ul>
+                        <div id="main">
+                        MANAGEMENT PAGE<br>
+                        </div>
+
+                        <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="instance.html">CreateVM</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="mysqlcon.php">DB</a></li>
+                        </ul>
 
 
-		                <h1>Create KVM Instance</h1><hr><br>
-				
-				<div style="text-align: center;">		             
-				step1 > <b>step2.Check Your Select</b> > step3<br><br>
-				</div>
-				
-				
+                                <h1>Create KVM Instance</h1><hr><br>
+
+                                <div style="text-align: center;">                
+                                step1 > <b>step2.Check Your Select</b> > step3<br><br>
+                                </div>
+
+
 
 <br><br>
 
@@ -62,12 +62,12 @@ echo "network : "."$network"."<br>";
 
 
 <br><br><br><br><br><br><br><hr>
-	<div style= "font-size:2em; margin:auto; color:#333333; font-family:impact" align="center" >
-	<p><b>contact</b></p>
-	</div>
-	<div style= "font-size:1.5em; margin:auto; font-family:impact" align="center" >
-	<img src="phone.png" width="30" height="30"> Phone  010-xxxx-xxxx<br>
-	<p>	<img src="email.png" width="30" height="30"> Email	ciw0707@naver.com</P>
-	</div>
+        <div style= "font-size:2em; margin:auto; color:#333333; font-family:impact" align="center" >
+        <p><b>contact</b></p>
+        </div>
+        <div style= "font-size:1.5em; margin:auto; font-family:impact" align="center" >
+        <img src="phone.png" width="30" height="30"> Phone  010-xxxx-xxxx<br>
+        <p>     <img src="email.png" width="30" height="30"> Email      ciw0707@naver.com</P>
+        </div>
 </body>
 </html>
