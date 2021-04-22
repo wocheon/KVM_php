@@ -7,7 +7,7 @@
 
 
 <body>
-<!-- 메뉴바-->        
+<!-- 메뉴바-->
         <div id="main"> MANAGEMENT PAGE<br></div>
 
         <ul>
@@ -21,7 +21,7 @@
 
         <h1>Create KVM Instance</h1><hr><br>
 
-        <div style="text-align: center;">                
+        <div style="text-align: center;">
                 step1 > <b>step2.Check Your Select</b> > step3<br><br>
         </div><br><br>
 
@@ -41,14 +41,14 @@
                 ?>
         </h1>
 
-<!-- 2.취소하고 이전 페이지로 이동-->        
+<!-- 2.취소하고 이전 페이지로 이동-->
         <div id="center">
                 <form action="instance.html" method="post">
                         <input type="submit" value="cancel" style="font-size : 26px; witdh: 50px; display: inline;">
                 </form>
 
 <!-- 3.post로 변수 전달-->
-                <form action="result.php" method="post" >
+                <form action="loading.php" method="post" >
                         <input type=hidden name=vmname value=<?=$vmname?>>
                         <input type=hidden name=vcpus value=<?=$vcpus?>>
                         <input type=hidden name=ram value=<?=$ram?>>
@@ -63,11 +63,11 @@
         <div style= "font-size:2em; margin:auto; color:#333333; font-family:impact" align="center" >
                 <p><b>contact</b></p>
         </div>
-        
+
         <div style= "font-size:1.5em; margin:auto; font-family:impact" align="center" >
                 <img src="img/phone.png" width="30" height="30"> Phone  010-xxxx-xxxx<br>
                 <p><img src="img/email.png" width="30" height="30"> Email      ciw0707@naver.com</P>
         </div>
-        
+
 </body>
 </html>
