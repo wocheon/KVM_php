@@ -2,8 +2,6 @@
 <html>
 <head>
 	<title> gallery </title>
-	<link rel="stylesheet" href="css1.css" type="text/css">
-	
 	<style>
 		img {
 		witdh: 250px;
@@ -15,14 +13,8 @@
 </head>
 
 <body>
-	<div id="main">MANAGEMENT PAGE<br></div>
-	
-	<ul>
-	<li><a href="index.html">Home</a></li>
-	<li><a href="instance.html">CreateVM</a></li>
-	<li><a href="gallery.html">Gallery</a></li>
-	<li><a href="mysqlcon.php">DB</a></li>
-	</ul>
+<!-- 메뉴바-->
+<?php include 'include/menu.html'?>
 
 	<h2> img gallay </h2>
 	<img src="img/topology.jpg">
@@ -32,6 +24,9 @@
 	<img src="img/topology.jpg">
 	<img src="img/topology.jpg">
 	<img src="img/topology.jpg">
-		
+
+<!-- 하단 연락처-->
+<?php include 'include/bottom.html'?>
+	
 </body>
 </html>
