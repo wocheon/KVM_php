@@ -13,7 +13,7 @@
         <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="instance.html">CreateVM</a></li>
-        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="mysqlcon.php">DB</a></li>
         </ul>
 
