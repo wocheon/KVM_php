@@ -5,21 +5,27 @@
         <head>
 
         <body>
-                <?PHP
+<?php
 
-        $username =$_POST["input1"];
-        $password =$_POST["input2"];;
+        $input_id =$_POST['input1'];
+        $input_password =$_POST['input2'];
 
-        $db_data["username"]="ciw0707";
-        $db_data["password"]="diak1351";
+        $con = mysqli_connect("192.168.1.101", "user1", "user1","testdb") or die ("Mysql connection fail !!!");
+        $sql = "SELECT password from usertbl where id ='$input_id'";
+        $ret = mysqli_query($con, $sql);
+        $row = mysqli_fetch_array($ret);
+        $s=$row['password'];
 
-
-        if ( $username == $db_data["username"] && $password == $db_data["password"] )
+      if (password_verify($input_password, $s)) {
         echo("<script>location.href='index1.php';</script>");
-        else
-
+        } 
+      else {
         echo("<script>location.href='index.html';</script>");
-                ?>
+        }
+
+        mysqli_close($con);
+?>
+
         </body>
 
 </HTML>
