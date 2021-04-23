@@ -15,7 +15,7 @@
 
 
         if ( $username == $db_data["username"] && $password == $db_data["password"] )
-        echo("<script>location.href='index1.html';</script>");
+        echo("<script>location.href='index1.php';</script>");
         else
 
         echo("<script>location.href='index.html';</script>");
