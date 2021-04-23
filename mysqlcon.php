@@ -12,7 +12,7 @@
 <!-- 1.Mariadb와 연결 여부 확인, view테이블에서 몇줄이 나오는지 확인-->        
         <p>
         <?php
-        $con = mysqli_connect("localhost", "user1", "user1","testdb") or die ("Mysql connection fail !!!");
+        $con = mysqli_connect("192.168.1.101", "user1", "user1","testdb") or die ("Mysql connection fail !!!");
         echo ("MYSQL CON success!!");
         $sql = "SELECT * FROM vm_view";
         $ret = mysqli_query($con, $sql);
