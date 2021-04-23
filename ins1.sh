@@ -1,7 +1,7 @@
 #start install
 #DB로 data전송
 hostip=$(ip add show br01 | grep 192.168.1.* | gawk '{print $2}'| cut -c 1-13)
-cpurate=$(mpstat | tail -1 | gawk '{print 100-$13}')
+cpurate=$(mpstat | tail -1 | gawk '{print $13}' | gawk -F "." '{print 100-$1}')
 
 vmname=$1
 vcpus=$2
