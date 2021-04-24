@@ -17,6 +17,11 @@ echo '<Install PHP (6/6)>'
 yum install -y php72 php72-php-fpm php72-php-mysqlnd php72-php-opcache php72-php-xml php72-php-xmlrpc php72-php-gd php72-php-mbstring php72-php-json  
 echo " complete!"
 
+yum install -y mysql-client mysql vim sysstat net-tools 
+systemctl enable httpd
+systemctl restart httpd
+
+
 #권한 수정
 usermod -G wheel,qemu,root apache
 chmod 777 /root/
@@ -26,11 +31,5 @@ echo "apache          ALL=(ALL)       NOPASSWD: ALL">> /etc/sudoers
 systemctl restart httpd
 
 
-#DB 수정 
 
-read  -p "DB host : ? " dbh1
-read  -p "DB user : ? " dbu1
-read  -p "DB password : ? " dbp1
-read  -p "select databases :  " dbd1
-sed -i "s/mysqli_connect("localhost", "user1", "user1","testdb")/mysqli_connect("${dbh1}", "${dbu1}", "${dbp1}","${dbd1}")
 
