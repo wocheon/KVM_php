@@ -9,7 +9,7 @@
 		
 <body>
 <!-- 메뉴바 -->
-<?php include 'include/menu.html'?>
+<?php include 'include/menu.php'?>
 
 <!-- 본문-->	
 	<h1>Create KVM Instance</h1><hr><br>
