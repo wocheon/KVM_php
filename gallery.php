@@ -6,7 +6,7 @@
 
 <body>
 <!-- 메뉴바-->
-<?php include 'include/menu.html'?>
+<?php include 'include/menu.php'?>
 
         <h2> img gallay </h2>
         <div style="text-align: center;">
