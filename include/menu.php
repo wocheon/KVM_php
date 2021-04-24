@@ -8,7 +8,8 @@
 <body>
 <!-- 메뉴바-->
         <div id="main"> MANAGEMENT PAGE<br></div>
-
+        <h2> HELLO <?php session_start(); echo $_SESSION['id'];?> !</h2>
+        
         <ul>
         <li><a href="index1.php">Home</a></li>
         <li><a href="instance.php">CreateVM</a></li>
