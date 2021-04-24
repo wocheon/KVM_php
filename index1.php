@@ -7,7 +7,7 @@
 </head>
 <body>
 <!-- 메뉴바-->
-<?php include 'include/menu.html'?>
+<?php include 'include/menu.php'?>
 <!-- 본문-->
         <div style="font-size:4.5em; font-family:impact; color: #003458 " align="center">
         welcome to <br>my project webserver!
