@@ -15,6 +15,7 @@
         <li><a href="instance.php">CreateVM</a></li>
         <li><a href="gallery.php">Gallery</a></li>
         <li><a href="mysqlcon.php">DB</a></li>
+        <li><a href="comment.php">COMMENT</a></li>
         <li><a href="index.html">LOGOUT</a></li>
 
         </ul><br>
