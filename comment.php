@@ -8,12 +8,12 @@
 <body>
 <!-- ��~T�~I���~T-->
 <?php include 'include/menu.php'?>
-
+<?php include 'include/mariadbcon.php'?>
 <!-- 1.Mariadb�~Y~@ �~W�결 �~W���~@ �~Y~U�~]�, view�~E~L�~]���~T�~W~P�~D~\ ��~G��~D�~]� �~B~X�~X��~J~T��~@ �~Y~U�~]�-->
         <p>
         <?php
-        $con = mysqli_connect("172.17.0.3", "root", "diak1351!","testdb") or die ("Mysql connection fail !!!");
-        echo ("DB SEVER ON!!");
+        //$con = mysqli_connect("172.17.0.3", "root", "diak1351!","testdb") or die ("Mysql connection fail !!!");
+        //echo ("DB SEVER ON!!");
         $sql = "SELECT * FROM comment";
        $ret = mysqli_query($con, $sql);
 
