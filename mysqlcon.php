@@ -8,6 +8,7 @@
 <body>
 <!-- 메뉴바-->        
 <?php include 'include/menu.php'?>
+<?php include 'include/mariadbcon.php'?>
         
 <!-- 1.Mariadb와 연결 여부 확인, view테이블에서 몇줄이 나오는지 확인-->        
         <p>
