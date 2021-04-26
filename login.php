@@ -9,8 +9,8 @@
         session_destroy();
         $input_id =$_POST['input1'];
         $input_password =$_POST['input2'];
-
-        $con = mysqli_connect("192.168.1.101", "user1", "user1","testdb") or die ("Mysql connection fail !!!");
+        include 'include/mariadbcon.php';
+        //$con = mysqli_connect("192.168.1.101", "user1", "user1","testdb") or die ("Mysql connection fail !!!");
         $sql = "SELECT password from usertbl where id ='$input_id'";
         $ret = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($ret);
