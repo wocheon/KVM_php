@@ -3,14 +3,14 @@
 <head> </head>
 <body>
 <?php
-
+include 'include/mariadbcon.php';
 $id = $_POST['input1'];
 $pass = $_POST['input2'];
 $name = $_POST['input3'];
 $hashpass = password_hash($pass,PASSWORD_DEFAULT);
 
 
-$con = mysqli_connect("192.168.1.101", "user1", "user1", "testdb") or die("MYSQL con fail!"); 	
+//$con = mysqli_connect("192.168.1.101", "user1", "user1", "testdb") or die("MYSQL con fail!"); 	
 $sql = "insert into usertbl (id,password,name) values ('$id','$hashpass','$name')";
 $ret = mysqli_query($con, $sql);
 
